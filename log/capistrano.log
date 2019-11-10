@@ -678,3 +678,423 @@
   INFO [e9ff96ca] Running /usr/bin/env bundle install --path /home/deploy/jianyi/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@182.61.5.211
  DEBUG [e9ff96ca] Command: cd /home/deploy/jianyi/releases/20191110015849 && /usr/bin/env bundle install --path /home/deploy/jianyi/shared/bundle --jobs 4 --without development test --deployment --quiet
  DEBUG [e9ff96ca] 	Could not locate Gemfile
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-11-10 10:33:20 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a14bf83d] Running /usr/bin/env mkdir -p /tmp as deploy@182.61.5.211
+ DEBUG [a14bf83d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a14bf83d] Finished in 0.781 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-jianyi-production-bigbook.sh 0.0%
+  INFO Uploading /tmp/git-ssh-jianyi-production-bigbook.sh 100.0%
+  INFO [540a7406] Running /usr/bin/env chmod 700 /tmp/git-ssh-jianyi-production-bigbook.sh as deploy@182.61.5.211
+ DEBUG [540a7406] Command: /usr/bin/env chmod 700 /tmp/git-ssh-jianyi-production-bigbook.sh
+  INFO [540a7406] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [6c6d1bc2] Running /usr/bin/env git ls-remote git@github.com:JohnShi521/jianyi.git HEAD as deploy@182.61.5.211
+ DEBUG [6c6d1bc2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git ls-remote git@github.com:JohnShi521/jianyi.git HEAD )
+ DEBUG [6c6d1bc2] 	f68d768839b3a852509d3b095028a4fc24f488ff	HEAD
+  INFO [6c6d1bc2] Finished in 7.012 seconds with exit status 0 (successful).
+  INFO [d12e7915] Running /usr/bin/env mkdir -p /home/deploy/jianyi/shared /home/deploy/jianyi/releases as deploy@182.61.5.211
+ DEBUG [d12e7915] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/shared /home/deploy/jianyi/releases
+  INFO [d12e7915] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [ca6d1626] Running /usr/bin/env mkdir -p /home/deploy/jianyi/shared/log /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/shared/public/assets as deploy@182.61.5.211
+ DEBUG [ca6d1626] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/shared/log /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/shared/public/assets
+  INFO [ca6d1626] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [8dc8fd74] Running /usr/bin/env mkdir -p /home/deploy/jianyi/shared/config as deploy@182.61.5.211
+ DEBUG [8dc8fd74] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/shared/config
+  INFO [8dc8fd74] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG [7867db96] Running [ -f /home/deploy/jianyi/shared/config/database.yml ] as deploy@182.61.5.211
+ DEBUG [7867db96] Command: [ -f /home/deploy/jianyi/shared/config/database.yml ]
+ DEBUG [7867db96] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [3b1b5fcc] Running [ -f /home/deploy/jianyi/shared/config/secrets.yml ] as deploy@182.61.5.211
+ DEBUG [3b1b5fcc] Command: [ -f /home/deploy/jianyi/shared/config/secrets.yml ]
+ DEBUG [3b1b5fcc] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [8cb79b50] Running [ -f /home/deploy/jianyi/current/REVISION ] as deploy@182.61.5.211
+ DEBUG [8cb79b50] Command: [ -f /home/deploy/jianyi/current/REVISION ]
+ DEBUG [8cb79b50] Finished in 0.176 seconds with exit status 1 (failed).
+ DEBUG [a6db427b] Running [ -f /home/deploy/jianyi/repo/HEAD ] as deploy@182.61.5.211
+ DEBUG [a6db427b] Command: [ -f /home/deploy/jianyi/repo/HEAD ]
+ DEBUG [a6db427b] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/jianyi/repo
+ DEBUG [f9929b23] Running if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [f9929b23] Command: if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi
+ DEBUG [f9929b23] Finished in 0.175 seconds with exit status 0 (successful).
+  INFO [13d40262] Running /usr/bin/env git remote set-url origin git@github.com:JohnShi521/jianyi.git as deploy@182.61.5.211
+ DEBUG [13d40262] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git remote set-url origin git@github.com:JohnShi521/jianyi.git )
+  INFO [13d40262] Finished in 0.185 seconds with exit status 0 (successful).
+  INFO [af81d640] Running /usr/bin/env git remote update --prune as deploy@182.61.5.211
+ DEBUG [af81d640] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [af81d640] 	Fetching origin
+ DEBUG [af81d640] 	From github.com:JohnShi521/jianyi
+ * [new branch]      dependabot/bundler/ffi-1.11.1 -> dependabot/bundler/ffi-1.11.1
+ * [new branch]      dependabot/bundler/loofah-2.3.1 -> dependabot/bundler/loofah-2.3.1
+ * [new branch]      dependabot/bundler/nokogiri-1.10.5 -> dependabot/bundler/nokogiri-1.10.5
+ * [new branch]      dependabot/bundler/rack-2.0.7 -> dependabot/bundler/rack-2.0.7
+ * [new branch]      dependabot/bundler/rails-html-sanitizer-1.3.0 -> dependabot/bundler/rails-html-sanitizer-1.3.0
+ * [new branch]      dependabot/bundler/sprockets-3.7.2 -> dependabot/bundler/sprockets-3.7.2
+   d8b0ca5..f68d768  master     -> master
+ * [new ref]         refs/pull/1/head -> refs/pull/1/head
+ * [new ref]         refs/pull/1/merge -> refs/pull/1/merge
+ * [new ref]         refs/pull/2/head -> refs/pull/2/head
+ * [new ref]         refs/pull/2/merge -> refs/pull/2/merge
+ * [new ref]         refs/pull/3/head -> refs/pull/3/head
+ * [new ref]         refs/pull/3/merge -> refs/pull/3/merge
+ * [new ref]         refs/pull/4/head -> refs/pull/4/head
+ * [new ref]         refs/pull/4/merge -> refs/pull/4/merge
+ * [new ref]         refs/pull/5/head -> refs/pull/5/head
+ * [new ref]         refs/pull/5/merge -> refs/pull/5/merge
+ * [new ref]         refs/pull/6/head -> refs/pull/6/head
+ * [new ref]         refs/pull/6/merge -> refs/pull/6/merge
+  INFO [af81d640] Finished in 43.597 seconds with exit status 0 (successful).
+ DEBUG [44bc4c05] Running if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [44bc4c05] Command: if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi
+ DEBUG [44bc4c05] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [9afdfc33] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191110023329 as deploy@182.61.5.211
+ DEBUG [9afdfc33] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191110023329 )
+  INFO [9afdfc33] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [0006171d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/jianyi/releases/20191110023329 as deploy@182.61.5.211
+ DEBUG [0006171d] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/jianyi/releases/20191110023329 )
+  INFO [0006171d] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [20ec3be5] Running if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [20ec3be5] Command: if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi
+ DEBUG [20ec3be5] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [55ad88b3] Running /usr/bin/env git rev-list --max-count=1 master as deploy@182.61.5.211
+ DEBUG [55ad88b3] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [55ad88b3] 	f68d768839b3a852509d3b095028a4fc24f488ff
+ DEBUG [55ad88b3] Finished in 0.186 seconds with exit status 0 (successful).
+ DEBUG [bf7c9634] Running if test ! -d /home/deploy/jianyi/releases/20191110023329; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191110023329'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [bf7c9634] Command: if test ! -d /home/deploy/jianyi/releases/20191110023329; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191110023329'" 1>&2; false; fi
+ DEBUG [bf7c9634] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [9645e540] Running /usr/bin/env echo "f68d768839b3a852509d3b095028a4fc24f488ff" > REVISION as deploy@182.61.5.211
+ DEBUG [9645e540] Command: cd /home/deploy/jianyi/releases/20191110023329 && /usr/bin/env echo "f68d768839b3a852509d3b095028a4fc24f488ff" > REVISION
+  INFO [9645e540] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [7eb7dee5] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191110023329/config as deploy@182.61.5.211
+ DEBUG [7eb7dee5] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191110023329/config
+  INFO [7eb7dee5] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [7af73887] Running [ -L /home/deploy/jianyi/releases/20191110023329/config/database.yml ] as deploy@182.61.5.211
+ DEBUG [7af73887] Command: [ -L /home/deploy/jianyi/releases/20191110023329/config/database.yml ]
+ DEBUG [7af73887] Finished in 0.181 seconds with exit status 1 (failed).
+ DEBUG [96c33cbc] Running [ -f /home/deploy/jianyi/releases/20191110023329/config/database.yml ] as deploy@182.61.5.211
+ DEBUG [96c33cbc] Command: [ -f /home/deploy/jianyi/releases/20191110023329/config/database.yml ]
+ DEBUG [96c33cbc] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO [a0be72bf] Running /usr/bin/env rm /home/deploy/jianyi/releases/20191110023329/config/database.yml as deploy@182.61.5.211
+ DEBUG [a0be72bf] Command: /usr/bin/env rm /home/deploy/jianyi/releases/20191110023329/config/database.yml
+  INFO [a0be72bf] Finished in 0.175 seconds with exit status 0 (successful).
+  INFO [ec3f691e] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/config/database.yml /home/deploy/jianyi/releases/20191110023329/config/database.yml as deploy@182.61.5.211
+ DEBUG [ec3f691e] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/config/database.yml /home/deploy/jianyi/releases/20191110023329/config/database.yml
+  INFO [ec3f691e] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [ca2f7683] Running [ -L /home/deploy/jianyi/releases/20191110023329/config/secrets.yml ] as deploy@182.61.5.211
+ DEBUG [ca2f7683] Command: [ -L /home/deploy/jianyi/releases/20191110023329/config/secrets.yml ]
+ DEBUG [ca2f7683] Finished in 0.182 seconds with exit status 1 (failed).
+ DEBUG [918c7450] Running [ -f /home/deploy/jianyi/releases/20191110023329/config/secrets.yml ] as deploy@182.61.5.211
+ DEBUG [918c7450] Command: [ -f /home/deploy/jianyi/releases/20191110023329/config/secrets.yml ]
+ DEBUG [918c7450] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [1f4e5bdc] Running /usr/bin/env rm /home/deploy/jianyi/releases/20191110023329/config/secrets.yml as deploy@182.61.5.211
+ DEBUG [1f4e5bdc] Command: /usr/bin/env rm /home/deploy/jianyi/releases/20191110023329/config/secrets.yml
+  INFO [1f4e5bdc] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [7f7059bb] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/config/secrets.yml /home/deploy/jianyi/releases/20191110023329/config/secrets.yml as deploy@182.61.5.211
+ DEBUG [7f7059bb] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/config/secrets.yml /home/deploy/jianyi/releases/20191110023329/config/secrets.yml
+  INFO [7f7059bb] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [f58fe1b7] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191110023329 /home/deploy/jianyi/releases/20191110023329/tmp /home/deploy/jianyi/releases/20191110023329/public as deploy@182.61.5.211
+ DEBUG [f58fe1b7] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191110023329 /home/deploy/jianyi/releases/20191110023329/tmp /home/deploy/jianyi/releases/20191110023329/public
+  INFO [f58fe1b7] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [79f522e6] Running [ -L /home/deploy/jianyi/releases/20191110023329/log ] as deploy@182.61.5.211
+ DEBUG [79f522e6] Command: [ -L /home/deploy/jianyi/releases/20191110023329/log ]
+ DEBUG [79f522e6] Finished in 0.177 seconds with exit status 1 (failed).
+ DEBUG [2361e417] Running [ -d /home/deploy/jianyi/releases/20191110023329/log ] as deploy@182.61.5.211
+ DEBUG [2361e417] Command: [ -d /home/deploy/jianyi/releases/20191110023329/log ]
+ DEBUG [2361e417] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [f2510253] Running /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191110023329/log as deploy@182.61.5.211
+ DEBUG [f2510253] Command: /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191110023329/log
+  INFO [f2510253] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [6f75bddf] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/log /home/deploy/jianyi/releases/20191110023329/log as deploy@182.61.5.211
+ DEBUG [6f75bddf] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/log /home/deploy/jianyi/releases/20191110023329/log
+  INFO [6f75bddf] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [805aa8b7] Running [ -L /home/deploy/jianyi/releases/20191110023329/tmp/pids ] as deploy@182.61.5.211
+ DEBUG [805aa8b7] Command: [ -L /home/deploy/jianyi/releases/20191110023329/tmp/pids ]
+ DEBUG [805aa8b7] Finished in 0.186 seconds with exit status 1 (failed).
+ DEBUG [f68385db] Running [ -d /home/deploy/jianyi/releases/20191110023329/tmp/pids ] as deploy@182.61.5.211
+ DEBUG [f68385db] Command: [ -d /home/deploy/jianyi/releases/20191110023329/tmp/pids ]
+ DEBUG [f68385db] Finished in 0.224 seconds with exit status 1 (failed).
+  INFO [897ab251] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/releases/20191110023329/tmp/pids as deploy@182.61.5.211
+ DEBUG [897ab251] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/releases/20191110023329/tmp/pids
+  INFO [897ab251] Finished in 0.206 seconds with exit status 0 (successful).
+ DEBUG [d76affcd] Running [ -L /home/deploy/jianyi/releases/20191110023329/tmp/cache ] as deploy@182.61.5.211
+ DEBUG [d76affcd] Command: [ -L /home/deploy/jianyi/releases/20191110023329/tmp/cache ]
+ DEBUG [d76affcd] Finished in 0.176 seconds with exit status 1 (failed).
+ DEBUG [d0009ee3] Running [ -d /home/deploy/jianyi/releases/20191110023329/tmp/cache ] as deploy@182.61.5.211
+ DEBUG [d0009ee3] Command: [ -d /home/deploy/jianyi/releases/20191110023329/tmp/cache ]
+ DEBUG [d0009ee3] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [d792c2aa] Running /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191110023329/tmp/cache as deploy@182.61.5.211
+ DEBUG [d792c2aa] Command: /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191110023329/tmp/cache
+  INFO [d792c2aa] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [1d2001e0] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/releases/20191110023329/tmp/cache as deploy@182.61.5.211
+ DEBUG [1d2001e0] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/releases/20191110023329/tmp/cache
+  INFO [1d2001e0] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG [67ddc9db] Running [ -L /home/deploy/jianyi/releases/20191110023329/tmp/sockets ] as deploy@182.61.5.211
+ DEBUG [67ddc9db] Command: [ -L /home/deploy/jianyi/releases/20191110023329/tmp/sockets ]
+ DEBUG [67ddc9db] Finished in 0.179 seconds with exit status 1 (failed).
+ DEBUG [bfc7f7ef] Running [ -d /home/deploy/jianyi/releases/20191110023329/tmp/sockets ] as deploy@182.61.5.211
+ DEBUG [bfc7f7ef] Command: [ -d /home/deploy/jianyi/releases/20191110023329/tmp/sockets ]
+ DEBUG [bfc7f7ef] Finished in 0.182 seconds with exit status 1 (failed).
+  INFO [c4fe7030] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/releases/20191110023329/tmp/sockets as deploy@182.61.5.211
+ DEBUG [c4fe7030] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/releases/20191110023329/tmp/sockets
+  INFO [c4fe7030] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [18dd0cdc] Running [ -L /home/deploy/jianyi/releases/20191110023329/public/system ] as deploy@182.61.5.211
+ DEBUG [18dd0cdc] Command: [ -L /home/deploy/jianyi/releases/20191110023329/public/system ]
+ DEBUG [18dd0cdc] Finished in 0.172 seconds with exit status 1 (failed).
+ DEBUG [b6a6d882] Running [ -d /home/deploy/jianyi/releases/20191110023329/public/system ] as deploy@182.61.5.211
+ DEBUG [b6a6d882] Command: [ -d /home/deploy/jianyi/releases/20191110023329/public/system ]
+ DEBUG [b6a6d882] Finished in 0.179 seconds with exit status 1 (failed).
+  INFO [b306a846] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/releases/20191110023329/public/system as deploy@182.61.5.211
+ DEBUG [b306a846] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/releases/20191110023329/public/system
+  INFO [b306a846] Finished in 0.184 seconds with exit status 0 (successful).
+ DEBUG [4eedc502] Running [ -L /home/deploy/jianyi/releases/20191110023329/public/assets ] as deploy@182.61.5.211
+ DEBUG [4eedc502] Command: [ -L /home/deploy/jianyi/releases/20191110023329/public/assets ]
+ DEBUG [4eedc502] Finished in 0.247 seconds with exit status 1 (failed).
+ DEBUG [5818d8b9] Running [ -d /home/deploy/jianyi/releases/20191110023329/public/assets ] as deploy@182.61.5.211
+ DEBUG [5818d8b9] Command: [ -d /home/deploy/jianyi/releases/20191110023329/public/assets ]
+ DEBUG [5818d8b9] Finished in 0.231 seconds with exit status 1 (failed).
+  INFO [90291139] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/public/assets /home/deploy/jianyi/releases/20191110023329/public/assets as deploy@182.61.5.211
+ DEBUG [90291139] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/public/assets /home/deploy/jianyi/releases/20191110023329/public/assets
+  INFO [90291139] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG [a756e457] Running if test ! -d /home/deploy/jianyi/releases/20191110023329; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191110023329'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [a756e457] Command: if test ! -d /home/deploy/jianyi/releases/20191110023329; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191110023329'" 1>&2; false; fi
+ DEBUG [a756e457] Finished in 0.206 seconds with exit status 0 (successful).
+ DEBUG [85cd9727] Running /usr/bin/env bundle check --path /home/deploy/jianyi/shared/bundle as deploy@182.61.5.211
+ DEBUG [85cd9727] Command: cd /home/deploy/jianyi/releases/20191110023329 && /usr/bin/env bundle check --path /home/deploy/jianyi/shared/bundle
+ DEBUG [85cd9727] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [85cd9727] 	The following gems are missing
+ DEBUG [85cd9727] 	 * net-ssh (5.2.0)
+ DEBUG [85cd9727] 	 * net-scp (2.0.0)
+ DEBUG [85cd9727] 	 * sshkit (1.20.0)
+ DEBUG [85cd9727] 	 * airbrussh (1.4.0)
+ DEBUG [85cd9727] 	 * byebug (9.0.5)
+ DEBUG [85cd9727] 	 * capistrano (3.11.2)
+ DEBUG [85cd9727] 	 * capistrano-bundler (1.6.0)
+ DEBUG [85cd9727] 	 * capistrano-passenger (0.2.0)
+ DEBUG [85cd9727] 	 * capistrano-rails (1.4.0)
+ DEBUG [85cd9727] 	 * debug_inspector (0.0.2)
+ DEBUG [85cd9727] 	 * rb-fsevent (0.9.7)
+ DEBUG [85cd9727] 	 * rb-inotify (0.9.7)
+ DEBUG [85cd9727] 	 * listen (3.0.8)
+ DEBUG [85cd9727] 	 * spring (1.7.2)
+ DEBUG [85cd9727] 	 * spring-watcher-listen (2.0.0)
+ DEBUG [85cd9727] 	 * web-console (3.3.1)
+ DEBUG [85cd9727] 	Install missing gems with `bundle install`
+ DEBUG [85cd9727] Finished in 0.427 seconds with exit status 1 (failed).
+  INFO [6cabb8f6] Running /usr/bin/env bundle install --path /home/deploy/jianyi/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@182.61.5.211
+ DEBUG [6cabb8f6] Command: cd /home/deploy/jianyi/releases/20191110023329 && /usr/bin/env bundle install --path /home/deploy/jianyi/shared/bundle --jobs 4 --without development test --deployment --quiet
+  INFO [6cabb8f6] Finished in 0.983 seconds with exit status 0 (successful).
+ DEBUG [fecb5884] Running if test ! -d /home/deploy/jianyi/releases/20191110023329; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191110023329'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [fecb5884] Command: if test ! -d /home/deploy/jianyi/releases/20191110023329; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191110023329'" 1>&2; false; fi
+ DEBUG [fecb5884] Finished in 0.192 seconds with exit status 0 (successful).
+  INFO [b61810d4] Running bundle exec rake assets:precompile as deploy@182.61.5.211
+ DEBUG [b61810d4] Command: cd /home/deploy/jianyi/releases/20191110023329 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; bundle exec rake assets:precompile )
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/rake-11.2.2/lib/rake/ext/fixnum.rb:4: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/concurrent-ruby-1.0.2/lib/concurrent/map.rb:206: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/xml_mini.rb:51: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/xml_mini.rb:52: warning: constant ::Bignum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.0/lib/sprockets/digest_utils.rb:47: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.0/lib/sprockets/digest_utils.rb:51: warning: constant ::Bignum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:110: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:111: warning: constant ::Bignum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/concurrent-ruby-1.0.2/lib/concurrent/map.rb:230: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/core_ext/numeric/conversions.rb:138: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/concurrent-ruby-1.0.2/lib/concurrent/map.rb:230: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/concurrent-ruby-1.0.2/lib/concurrent/map.rb:230: warning: constant ::Fixnum is deprecated
+ DEBUG [b61810d4] 	rake aborted!
+ DEBUG [b61810d4] 	Gem::LoadError: Specified 'mysql2' for database adapter, but the gem is not loaded. Add `gem 'mysql2'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).
+ DEBUG [b61810d4] 	/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/connection_specification.rb:176:in `rescue in spec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/connection_specification.rb:173:in `spec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:53:in `establish_connection'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:44:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/base.rb:324:in `<module:ActiveRecord>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/base.rb:24:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/releases/20191110023329/app/models/application_record.rb:1:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:380:in `block in require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/concurrency/share_lock.rb:117:in `exclusive'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:11:in `loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:358:in `require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:511:in `load_missing_constant'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:203:in `const_missing'
+/home/deploy/jianyi/releases/20191110023329/app/models/user.rb:1:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:380:in `block in require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/concurrency/share_lock.rb:117:in `exclusive'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:11:in `loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:358:in `require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:511:in `load_missing_constant'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:203:in `const_missing'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:268:in `const_get'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:268:in `block in constantize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:266:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:266:in `inject'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:266:in `constantize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:583:in `get'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:614:in `constantize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise.rb:320:in `get'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:83:in `to'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:78:in `modules'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:95:in `routes'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:162:in `default_used_route'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:72:in `initialize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise.rb:350:in `new'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise.rb:350:in `add_mapping'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/rails/routes.rb:243:in `block in devise_for'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/rails/routes.rb:242:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/rails/routes.rb:242:in `devise_for'
+/home/deploy/jianyi/releases/20191110023329/config/routes.rb:9:in `block in <top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/actionpack-5.0.0/lib/action_dispatch/routing/route_set.rb:389:in `instance_exec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/actionpack-5.0.0/lib/action_dispatch/routing/route_set.rb:389:in `eval_block'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/actionpack-5.0.0/lib/action_dispatch/routing/route_set.rb:371:in `draw'
+/home/deploy/jianyi/releases/20191110023329/config/routes.rb:1:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:287:in `load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:287:in `block in load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:287:in `load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:40:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/file_update_checker.rb:77:in `execute'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/finisher.rb:119:in `block in <module:Finisher>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:30:in `instance_exec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:30:in `run'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:54:in `run_initializers'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application.rb:352:in `initialize!'
+/home/deploy/jianyi/releases/20191110023329/config/environment.rb:5:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application.rb:328:in `require_environment!'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.1.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+ DEBUG [b61810d4] 	Gem::LoadError: can't activate mysql2 (< 0.5, >= 0.3.18), already activated mysql2-0.5.2. Make sure all dependencies are added to Gemfile.
+ DEBUG [b61810d4] 	/var/lib/gems/2.4.0/gems/bundler-2.0.2/lib/bundler/rubygems_integration.rb:406:in `block (2 levels) in replace_gem'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:4:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:53:in `establish_connection'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:44:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/base.rb:324:in `<module:ActiveRecord>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.0/lib/active_record/base.rb:24:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/releases/20191110023329/app/models/application_record.rb:1:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:380:in `block in require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/concurrency/share_lock.rb:117:in `exclusive'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:11:in `loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:358:in `require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:511:in `load_missing_constant'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:203:in `const_missing'
+/home/deploy/jianyi/releases/20191110023329/app/models/user.rb:1:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:380:in `block in require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/concurrency/share_lock.rb:117:in `exclusive'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies/interlock.rb:11:in `loading'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:37:in `load_interlock'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:358:in `require_or_load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:511:in `load_missing_constant'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:203:in `const_missing'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:268:in `const_get'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:268:in `block in constantize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:266:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:266:in `inject'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/inflector/methods.rb:266:in `constantize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:583:in `get'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:614:in `constantize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise.rb:320:in `get'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:83:in `to'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:78:in `modules'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:95:in `routes'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:162:in `default_used_route'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/mapping.rb:72:in `initialize'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise.rb:350:in `new'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise.rb:350:in `add_mapping'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/rails/routes.rb:243:in `block in devise_for'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/rails/routes.rb:242:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/devise-4.7.1/lib/devise/rails/routes.rb:242:in `devise_for'
+/home/deploy/jianyi/releases/20191110023329/config/routes.rb:9:in `block in <top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/actionpack-5.0.0/lib/action_dispatch/routing/route_set.rb:389:in `instance_exec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/actionpack-5.0.0/lib/action_dispatch/routing/route_set.rb:389:in `eval_block'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/actionpack-5.0.0/lib/action_dispatch/routing/route_set.rb:371:in `draw'
+/home/deploy/jianyi/releases/20191110023329/config/routes.rb:1:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:287:in `load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:287:in `block in load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:287:in `load'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:40:in `each'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/file_update_checker.rb:77:in `execute'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application/finisher.rb:119:in `block in <module:Finisher>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:30:in `instance_exec'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:30:in `run'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/initializable.rb:54:in `run_initializers'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application.rb:352:in `initialize!'
+/home/deploy/jianyi/releases/20191110023329/config/environment.rb:5:in `<top (required)>'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application.rb:328:in `require_environment!'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/railties-5.0.0/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.1.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/home/deploy/jianyi/shared/bundle/ruby/2.4.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+ DEBUG [b61810d4] 	Tasks: TOP => environment
+ DEBUG [b61810d4] 	(See full trace by running task with --trace)

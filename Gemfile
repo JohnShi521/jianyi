@@ -21,7 +21,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
- gem 'mysql2'
+ gem'mysql2', '~> 0.4.0'
 
 
 
