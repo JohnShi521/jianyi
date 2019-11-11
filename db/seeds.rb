@@ -8,16 +8,29 @@
 u = User.new
 u.email = "shibin@163.com"           # 可以改成自己的 email
 
-u.password = "oook123456"                # 最少要六码
+u.password = "boss123456"                # 最少要六码
 
 u.password_confirmation = "oook123456"   # 最少要六码
 
 u.is_admin = true
 u.save
+
+
 u = User.new
 u.email = "zhima@163.com"           # 可以改成自己的 email
 
-u.password = "ok123456"                # 最少要六码
+u.password = "zhima123456"                # 最少要六码
+
+u.password_confirmation = "ok123456"   # 最少要六码
+
+u.is_admin = true
+u.save
+
+
+u = User.new
+u.email = "kaikai@163.com"           # 可以改成自己的 email
+
+u.password = "kaikai123456"                # 最少要六码
 
 u.password_confirmation = "ok123456"   # 最少要六码
 
