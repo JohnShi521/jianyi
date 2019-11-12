@@ -1,4 +1,3 @@
-
 namespace :deploy do
   desc "reload the database with seed data"
   task :seed do

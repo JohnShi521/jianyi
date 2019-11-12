@@ -9,12 +9,7 @@ set :repo_url, "git@github.com:JohnShi521/jianyi.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 #自己加上去的：
-namespace :deploy do
-  desc "reload the database with seed data"
-  task :seed do
-    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
-  end
-end
+
 
 
 # Default deploy_to directory is /var/www/my_app_name
