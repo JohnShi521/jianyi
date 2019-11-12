@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-load 'lib/deploy/seed'
+#load 'lib/deploy/seed'
  sh "ssh-add"
 
 lock "~> 3.11.2"
@@ -44,3 +44,9 @@ set :passenger_restart_with_touch, true
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+namespace :deploy do
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
+  end
+end
