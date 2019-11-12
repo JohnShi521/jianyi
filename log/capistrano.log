@@ -7066,3 +7066,269 @@
   INFO [83a9e7c4] Running /usr/bin/env echo "Branch master (at a9ef855463fbaba351e51b529b662a3a45773a17) deployed as release 20191112003521 by bigbook" >> /home/deploy/jianyi/revisions.log as deploy@182.61.5.211
  DEBUG [83a9e7c4] Command: cd /home/deploy/jianyi/releases && /usr/bin/env echo "Branch master (at a9ef855463fbaba351e51b529b662a3a45773a17) deployed as release 20191112003521 by bigbook" >> /home/deploy/jianyi/revisions.log
   INFO [83a9e7c4] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-11-12 10:13:57 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a7e7ae44] Running /usr/bin/env mkdir -p /tmp as deploy@182.61.5.211
+ DEBUG [a7e7ae44] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a7e7ae44] Finished in 0.834 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-jianyi-production-bigbook.sh 0.0%
+  INFO Uploading /tmp/git-ssh-jianyi-production-bigbook.sh 100.0%
+  INFO [10a611a4] Running /usr/bin/env chmod 700 /tmp/git-ssh-jianyi-production-bigbook.sh as deploy@182.61.5.211
+ DEBUG [10a611a4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-jianyi-production-bigbook.sh
+  INFO [10a611a4] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [a138a30e] Running /usr/bin/env git ls-remote git@github.com:JohnShi521/jianyi.git HEAD as deploy@182.61.5.211
+ DEBUG [a138a30e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git ls-remote git@github.com:JohnShi521/jianyi.git HEAD )
+ DEBUG [a138a30e] 	87b3525b863495d35838b8b474cdf02b91f9a08e	HEAD
+  INFO [a138a30e] Finished in 5.343 seconds with exit status 0 (successful).
+  INFO [dc7d0e9e] Running /usr/bin/env mkdir -p /home/deploy/jianyi/shared /home/deploy/jianyi/releases as deploy@182.61.5.211
+ DEBUG [dc7d0e9e] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/shared /home/deploy/jianyi/releases
+  INFO [dc7d0e9e] Finished in 0.142 seconds with exit status 0 (successful).
+  INFO [2f2e356c] Running /usr/bin/env mkdir -p /home/deploy/jianyi/shared/log /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/shared/public/assets as deploy@182.61.5.211
+ DEBUG [2f2e356c] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/shared/log /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/shared/public/assets
+  INFO [2f2e356c] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [76330d5a] Running /usr/bin/env mkdir -p /home/deploy/jianyi/shared/config as deploy@182.61.5.211
+ DEBUG [76330d5a] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/shared/config
+  INFO [76330d5a] Finished in 0.182 seconds with exit status 0 (successful).
+ DEBUG [7550a109] Running [ -f /home/deploy/jianyi/shared/config/database.yml ] as deploy@182.61.5.211
+ DEBUG [7550a109] Command: [ -f /home/deploy/jianyi/shared/config/database.yml ]
+ DEBUG [7550a109] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [fc9c86fc] Running [ -f /home/deploy/jianyi/shared/config/secrets.yml ] as deploy@182.61.5.211
+ DEBUG [fc9c86fc] Command: [ -f /home/deploy/jianyi/shared/config/secrets.yml ]
+ DEBUG [fc9c86fc] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG [b2879981] Running [ -f /home/deploy/jianyi/current/REVISION ] as deploy@182.61.5.211
+ DEBUG [b2879981] Command: [ -f /home/deploy/jianyi/current/REVISION ]
+ DEBUG [b2879981] Finished in 0.196 seconds with exit status 0 (successful).
+ DEBUG [72097cb5] Running /usr/bin/env cat /home/deploy/jianyi/current/REVISION 2>/dev/null as deploy@182.61.5.211
+ DEBUG [72097cb5] Command: /usr/bin/env cat /home/deploy/jianyi/current/REVISION 2>/dev/null
+ DEBUG [72097cb5] 	a9ef855463fbaba351e51b529b662a3a45773a17
+ DEBUG [72097cb5] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [fa7dab2a] Running [ -f /home/deploy/jianyi/repo/HEAD ] as deploy@182.61.5.211
+ DEBUG [fa7dab2a] Command: [ -f /home/deploy/jianyi/repo/HEAD ]
+ DEBUG [fa7dab2a] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/jianyi/repo
+ DEBUG [5b05c3b2] Running if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [5b05c3b2] Command: if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi
+ DEBUG [5b05c3b2] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [ae767708] Running /usr/bin/env git remote set-url origin git@github.com:JohnShi521/jianyi.git as deploy@182.61.5.211
+ DEBUG [ae767708] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git remote set-url origin git@github.com:JohnShi521/jianyi.git )
+  INFO [ae767708] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [56286d26] Running /usr/bin/env git remote update --prune as deploy@182.61.5.211
+ DEBUG [56286d26] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [56286d26] 	Fetching origin
+ DEBUG [56286d26] 	From github.com:JohnShi521/jianyi
+   a9ef855..87b3525  master     -> master
+  INFO [56286d26] Finished in 5.412 seconds with exit status 0 (successful).
+ DEBUG [8848d31d] Running if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [8848d31d] Command: if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi
+ DEBUG [8848d31d] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [9e10ac4d] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405 as deploy@182.61.5.211
+ DEBUG [9e10ac4d] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405 )
+  INFO [9e10ac4d] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [74b5c066] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/jianyi/releases/20191112021405 as deploy@182.61.5.211
+ DEBUG [74b5c066] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/jianyi/releases/20191112021405 )
+  INFO [74b5c066] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [09fff0a8] Running if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [09fff0a8] Command: if test ! -d /home/deploy/jianyi/repo; then echo "Directory does not exist '/home/deploy/jianyi/repo'" 1>&2; false; fi
+ DEBUG [09fff0a8] Finished in 0.167 seconds with exit status 0 (successful).
+ DEBUG [b3747856] Running /usr/bin/env git rev-list --max-count=1 master as deploy@182.61.5.211
+ DEBUG [b3747856] Command: cd /home/deploy/jianyi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-jianyi-production-bigbook.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b3747856] 	87b3525b863495d35838b8b474cdf02b91f9a08e
+ DEBUG [b3747856] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [079e50e2] Running if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [079e50e2] Command: if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi
+ DEBUG [079e50e2] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO [9472db7d] Running /usr/bin/env echo "87b3525b863495d35838b8b474cdf02b91f9a08e" > REVISION as deploy@182.61.5.211
+ DEBUG [9472db7d] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env echo "87b3525b863495d35838b8b474cdf02b91f9a08e" > REVISION
+  INFO [9472db7d] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [1e63d8af] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405/config as deploy@182.61.5.211
+ DEBUG [1e63d8af] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405/config
+  INFO [1e63d8af] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [9f51439b] Running [ -L /home/deploy/jianyi/releases/20191112021405/config/database.yml ] as deploy@182.61.5.211
+ DEBUG [9f51439b] Command: [ -L /home/deploy/jianyi/releases/20191112021405/config/database.yml ]
+ DEBUG [9f51439b] Finished in 0.165 seconds with exit status 1 (failed).
+ DEBUG [f6efb58b] Running [ -f /home/deploy/jianyi/releases/20191112021405/config/database.yml ] as deploy@182.61.5.211
+ DEBUG [f6efb58b] Command: [ -f /home/deploy/jianyi/releases/20191112021405/config/database.yml ]
+ DEBUG [f6efb58b] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [2c0dfe5e] Running /usr/bin/env rm /home/deploy/jianyi/releases/20191112021405/config/database.yml as deploy@182.61.5.211
+ DEBUG [2c0dfe5e] Command: /usr/bin/env rm /home/deploy/jianyi/releases/20191112021405/config/database.yml
+  INFO [2c0dfe5e] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO [7aaef03f] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/config/database.yml /home/deploy/jianyi/releases/20191112021405/config/database.yml as deploy@182.61.5.211
+ DEBUG [7aaef03f] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/config/database.yml /home/deploy/jianyi/releases/20191112021405/config/database.yml
+  INFO [7aaef03f] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [089fc68a] Running [ -L /home/deploy/jianyi/releases/20191112021405/config/secrets.yml ] as deploy@182.61.5.211
+ DEBUG [089fc68a] Command: [ -L /home/deploy/jianyi/releases/20191112021405/config/secrets.yml ]
+ DEBUG [089fc68a] Finished in 0.169 seconds with exit status 1 (failed).
+ DEBUG [34a50dbd] Running [ -f /home/deploy/jianyi/releases/20191112021405/config/secrets.yml ] as deploy@182.61.5.211
+ DEBUG [34a50dbd] Command: [ -f /home/deploy/jianyi/releases/20191112021405/config/secrets.yml ]
+ DEBUG [34a50dbd] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [4c8660b4] Running /usr/bin/env rm /home/deploy/jianyi/releases/20191112021405/config/secrets.yml as deploy@182.61.5.211
+ DEBUG [4c8660b4] Command: /usr/bin/env rm /home/deploy/jianyi/releases/20191112021405/config/secrets.yml
+  INFO [4c8660b4] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [cb559b25] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/config/secrets.yml /home/deploy/jianyi/releases/20191112021405/config/secrets.yml as deploy@182.61.5.211
+ DEBUG [cb559b25] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/config/secrets.yml /home/deploy/jianyi/releases/20191112021405/config/secrets.yml
+  INFO [cb559b25] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [8889dc64] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405 /home/deploy/jianyi/releases/20191112021405/tmp /home/deploy/jianyi/releases/20191112021405/public as deploy@182.61.5.211
+ DEBUG [8889dc64] Command: /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405 /home/deploy/jianyi/releases/20191112021405/tmp /home/deploy/jianyi/releases/20191112021405/public
+  INFO [8889dc64] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [c3fd4d77] Running [ -L /home/deploy/jianyi/releases/20191112021405/log ] as deploy@182.61.5.211
+ DEBUG [c3fd4d77] Command: [ -L /home/deploy/jianyi/releases/20191112021405/log ]
+ DEBUG [c3fd4d77] Finished in 0.171 seconds with exit status 1 (failed).
+ DEBUG [346e725f] Running [ -d /home/deploy/jianyi/releases/20191112021405/log ] as deploy@182.61.5.211
+ DEBUG [346e725f] Command: [ -d /home/deploy/jianyi/releases/20191112021405/log ]
+ DEBUG [346e725f] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [c9df99da] Running /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191112021405/log as deploy@182.61.5.211
+ DEBUG [c9df99da] Command: /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191112021405/log
+  INFO [c9df99da] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [610cd9b7] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/log /home/deploy/jianyi/releases/20191112021405/log as deploy@182.61.5.211
+ DEBUG [610cd9b7] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/log /home/deploy/jianyi/releases/20191112021405/log
+  INFO [610cd9b7] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [b01662b0] Running [ -L /home/deploy/jianyi/releases/20191112021405/tmp/pids ] as deploy@182.61.5.211
+ DEBUG [b01662b0] Command: [ -L /home/deploy/jianyi/releases/20191112021405/tmp/pids ]
+ DEBUG [b01662b0] Finished in 0.168 seconds with exit status 1 (failed).
+ DEBUG [e789c415] Running [ -d /home/deploy/jianyi/releases/20191112021405/tmp/pids ] as deploy@182.61.5.211
+ DEBUG [e789c415] Command: [ -d /home/deploy/jianyi/releases/20191112021405/tmp/pids ]
+ DEBUG [e789c415] Finished in 0.170 seconds with exit status 1 (failed).
+  INFO [a26f25bf] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/releases/20191112021405/tmp/pids as deploy@182.61.5.211
+ DEBUG [a26f25bf] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/pids /home/deploy/jianyi/releases/20191112021405/tmp/pids
+  INFO [a26f25bf] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [aba9b9e0] Running [ -L /home/deploy/jianyi/releases/20191112021405/tmp/cache ] as deploy@182.61.5.211
+ DEBUG [aba9b9e0] Command: [ -L /home/deploy/jianyi/releases/20191112021405/tmp/cache ]
+ DEBUG [aba9b9e0] Finished in 0.175 seconds with exit status 1 (failed).
+ DEBUG [55b31fed] Running [ -d /home/deploy/jianyi/releases/20191112021405/tmp/cache ] as deploy@182.61.5.211
+ DEBUG [55b31fed] Command: [ -d /home/deploy/jianyi/releases/20191112021405/tmp/cache ]
+ DEBUG [55b31fed] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [8ac18532] Running /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191112021405/tmp/cache as deploy@182.61.5.211
+ DEBUG [8ac18532] Command: /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191112021405/tmp/cache
+  INFO [8ac18532] Finished in 0.189 seconds with exit status 0 (successful).
+  INFO [77097db0] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/releases/20191112021405/tmp/cache as deploy@182.61.5.211
+ DEBUG [77097db0] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/cache /home/deploy/jianyi/releases/20191112021405/tmp/cache
+  INFO [77097db0] Finished in 0.175 seconds with exit status 0 (successful).
+ DEBUG [b6b321ba] Running [ -L /home/deploy/jianyi/releases/20191112021405/tmp/sockets ] as deploy@182.61.5.211
+ DEBUG [b6b321ba] Command: [ -L /home/deploy/jianyi/releases/20191112021405/tmp/sockets ]
+ DEBUG [b6b321ba] Finished in 0.172 seconds with exit status 1 (failed).
+ DEBUG [2199a6ba] Running [ -d /home/deploy/jianyi/releases/20191112021405/tmp/sockets ] as deploy@182.61.5.211
+ DEBUG [2199a6ba] Command: [ -d /home/deploy/jianyi/releases/20191112021405/tmp/sockets ]
+ DEBUG [2199a6ba] Finished in 0.170 seconds with exit status 1 (failed).
+  INFO [e57df2a3] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/releases/20191112021405/tmp/sockets as deploy@182.61.5.211
+ DEBUG [e57df2a3] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/tmp/sockets /home/deploy/jianyi/releases/20191112021405/tmp/sockets
+  INFO [e57df2a3] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [20be94e8] Running [ -L /home/deploy/jianyi/releases/20191112021405/public/system ] as deploy@182.61.5.211
+ DEBUG [20be94e8] Command: [ -L /home/deploy/jianyi/releases/20191112021405/public/system ]
+ DEBUG [20be94e8] Finished in 0.170 seconds with exit status 1 (failed).
+ DEBUG [218f95f1] Running [ -d /home/deploy/jianyi/releases/20191112021405/public/system ] as deploy@182.61.5.211
+ DEBUG [218f95f1] Command: [ -d /home/deploy/jianyi/releases/20191112021405/public/system ]
+ DEBUG [218f95f1] Finished in 0.170 seconds with exit status 1 (failed).
+  INFO [5e7bb2bb] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/releases/20191112021405/public/system as deploy@182.61.5.211
+ DEBUG [5e7bb2bb] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/public/system /home/deploy/jianyi/releases/20191112021405/public/system
+  INFO [5e7bb2bb] Finished in 0.182 seconds with exit status 0 (successful).
+ DEBUG [9a219b43] Running [ -L /home/deploy/jianyi/releases/20191112021405/public/assets ] as deploy@182.61.5.211
+ DEBUG [9a219b43] Command: [ -L /home/deploy/jianyi/releases/20191112021405/public/assets ]
+ DEBUG [9a219b43] Finished in 0.183 seconds with exit status 1 (failed).
+ DEBUG [1e3be3c7] Running [ -d /home/deploy/jianyi/releases/20191112021405/public/assets ] as deploy@182.61.5.211
+ DEBUG [1e3be3c7] Command: [ -d /home/deploy/jianyi/releases/20191112021405/public/assets ]
+ DEBUG [1e3be3c7] Finished in 0.167 seconds with exit status 1 (failed).
+  INFO [029cab8a] Running /usr/bin/env ln -s /home/deploy/jianyi/shared/public/assets /home/deploy/jianyi/releases/20191112021405/public/assets as deploy@182.61.5.211
+ DEBUG [029cab8a] Command: /usr/bin/env ln -s /home/deploy/jianyi/shared/public/assets /home/deploy/jianyi/releases/20191112021405/public/assets
+  INFO [029cab8a] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG [7c3bf0b7] Running if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [7c3bf0b7] Command: if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi
+ DEBUG [7c3bf0b7] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [fe8593bd] Running /usr/bin/env bundle check --path /home/deploy/jianyi/shared/bundle as deploy@182.61.5.211
+ DEBUG [fe8593bd] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env bundle check --path /home/deploy/jianyi/shared/bundle
+ DEBUG [fe8593bd] 	The following gems are missing
+ DEBUG [fe8593bd] 	 * net-ssh (5.2.0)
+ DEBUG [fe8593bd] 	 * net-scp (2.0.0)
+ DEBUG [fe8593bd] 	 * sshkit (1.20.0)
+ DEBUG [fe8593bd] 	 * airbrussh (1.4.0)
+ DEBUG [fe8593bd] 	 * bindex (0.8.1)
+ DEBUG [fe8593bd] 	 * byebug (11.0.1)
+ DEBUG [fe8593bd] 	 * capistrano (3.11.2)
+ DEBUG [fe8593bd] 	 * capistrano-bundler (1.6.0)
+ DEBUG [fe8593bd] 	 * capistrano-passenger (0.2.0)
+ DEBUG [fe8593bd] 	 * capistrano-rails (1.4.0)
+ DEBUG [fe8593bd] 	 * listen (3.0.8)
+ DEBUG [fe8593bd] 	 * spring (2.1.0)
+ DEBUG [fe8593bd] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [fe8593bd] 	 * web-console (3.7.0)
+ DEBUG [fe8593bd] 	Install missing gems with `bundle install`
+ DEBUG [fe8593bd] Finished in 0.503 seconds with exit status 1 (failed).
+  INFO [7edc3c2e] Running /usr/bin/env bundle install --path /home/deploy/jianyi/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@182.61.5.211
+ DEBUG [7edc3c2e] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env bundle install --path /home/deploy/jianyi/shared/bundle --jobs 4 --without development test --deployment --quiet
+  INFO [7edc3c2e] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG [dc4bd2a6] Running if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [dc4bd2a6] Command: if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi
+ DEBUG [dc4bd2a6] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [063d4dc2] Running bundle exec rake assets:precompile as deploy@182.61.5.211
+ DEBUG [063d4dc2] Command: cd /home/deploy/jianyi/releases/20191112021405 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; bundle exec rake assets:precompile )
+ DEBUG [063d4dc2] 	Rails Error: Unable to access log file. Please ensure that /home/deploy/jianyi/releases/20191112021405/log/production.log exists and is writable (ie, make it writable for user and group: chmod 0664 /home/deploy/jianyi/releases/20191112021405/log/production.log). The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+  INFO [063d4dc2] Finished in 3.139 seconds with exit status 0 (successful).
+ DEBUG [583bb84b] Running if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [583bb84b] Command: if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi
+ DEBUG [583bb84b] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [1165d1e9] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405/assets_manifest_backup as deploy@182.61.5.211
+ DEBUG [1165d1e9] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405/assets_manifest_backup
+  INFO [1165d1e9] Finished in 0.174 seconds with exit status 0 (successful).
+ DEBUG [60af2676] Running /usr/bin/env ls /home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest* as deploy@182.61.5.211
+ DEBUG [60af2676] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env ls /home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest*
+ DEBUG [60af2676] 	/home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest-5f44744c38f9d43332efaf812feeca8d.json
+ DEBUG [60af2676] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [a5c3e88e] Running /usr/bin/env ls /home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest* as deploy@182.61.5.211
+ DEBUG [a5c3e88e] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env ls /home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest*
+ DEBUG [a5c3e88e] 	/home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest-5f44744c38f9d43332efaf812feeca8d.json
+ DEBUG [a5c3e88e] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [387e6a56] Running /usr/bin/env cp /home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest-5f44744c38f9d43332efaf812feeca8d.json /home/deploy/jianyi/releases/20191112021405/assets_manifest_backup as deploy@182.61.5.211
+ DEBUG [387e6a56] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env cp /home/deploy/jianyi/releases/20191112021405/public/assets/.sprockets-manifest-5f44744c38f9d43332efaf812feeca8d.json /home/deploy/jianyi/releases/20191112021405/assets_manifest_backup
+  INFO [387e6a56] Finished in 0.170 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [83346d64] Running if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [83346d64] Command: if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi
+ DEBUG [83346d64] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [b1a25955] Running bundle exec rake db:migrate as deploy@182.61.5.211
+ DEBUG [b1a25955] Command: cd /home/deploy/jianyi/releases/20191112021405 && ( export RAILS_ENV="production" ; bundle exec rake db:migrate )
+ DEBUG [b1a25955] 	Rails Error: Unable to access log file. Please ensure that /home/deploy/jianyi/releases/20191112021405/log/production.log exists and is writable (ie, make it writable for user and group: chmod 0664 /home/deploy/jianyi/releases/20191112021405/log/production.log). The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+ DEBUG [b1a25955] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+ DEBUG [b1a25955] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4678923934077136380', 0);[0m
+ DEBUG [b1a25955] 	  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+ DEBUG [b1a25955] 	  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+ DEBUG [b1a25955] 	  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [b1a25955] 	  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [b1a25955] 	  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4678923934077136380')[0m
+  INFO [b1a25955] Finished in 2.834 seconds with exit status 0 (successful).
+  INFO [db0472f5] Running /usr/bin/env ln -s /home/deploy/jianyi/releases/20191112021405 /home/deploy/jianyi/releases/current as deploy@182.61.5.211
+ DEBUG [db0472f5] Command: /usr/bin/env ln -s /home/deploy/jianyi/releases/20191112021405 /home/deploy/jianyi/releases/current
+  INFO [db0472f5] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [b3d9ef08] Running /usr/bin/env mv /home/deploy/jianyi/releases/current /home/deploy/jianyi as deploy@182.61.5.211
+ DEBUG [b3d9ef08] Command: /usr/bin/env mv /home/deploy/jianyi/releases/current /home/deploy/jianyi
+  INFO [b3d9ef08] Finished in 0.175 seconds with exit status 0 (successful).
+ DEBUG [bd6a0a98] Running if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [bd6a0a98] Command: if test ! -d /home/deploy/jianyi/releases/20191112021405; then echo "Directory does not exist '/home/deploy/jianyi/releases/20191112021405'" 1>&2; false; fi
+ DEBUG [bd6a0a98] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [426da0ef] Running /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405/tmp as deploy@182.61.5.211
+ DEBUG [426da0ef] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env mkdir -p /home/deploy/jianyi/releases/20191112021405/tmp
+  INFO [426da0ef] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [9bd44bb2] Running /usr/bin/env touch /home/deploy/jianyi/releases/20191112021405/tmp/restart.txt as deploy@182.61.5.211
+ DEBUG [9bd44bb2] Command: cd /home/deploy/jianyi/releases/20191112021405 && /usr/bin/env touch /home/deploy/jianyi/releases/20191112021405/tmp/restart.txt
+  INFO [9bd44bb2] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [1f239146] Running /usr/bin/env ls -x /home/deploy/jianyi/releases as deploy@182.61.5.211
+ DEBUG [1f239146] Command: /usr/bin/env ls -x /home/deploy/jianyi/releases
+ DEBUG [1f239146] 	20191111073537	20191111092101	20191111092524	20191112002823	20191112003521
+20191112021405
+ DEBUG [1f239146] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 182.61.5.211
+ DEBUG [8b759cc0] Running [ -d /home/deploy/jianyi/current ] as deploy@182.61.5.211
+ DEBUG [8b759cc0] Command: [ -d /home/deploy/jianyi/current ]
+ DEBUG [8b759cc0] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [b556d1d6] Running /usr/bin/env readlink /home/deploy/jianyi/current as deploy@182.61.5.211
+ DEBUG [b556d1d6] Command: /usr/bin/env readlink /home/deploy/jianyi/current
+ DEBUG [b556d1d6] 	/home/deploy/jianyi/releases/20191112021405
+ DEBUG [b556d1d6] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [55b83664] Running /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191111073537 as deploy@182.61.5.211
+ DEBUG [55b83664] Command: /usr/bin/env rm -rf /home/deploy/jianyi/releases/20191111073537
+  INFO [55b83664] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [913e53f0] Running if test ! -d /home/deploy/jianyi/releases; then echo "Directory does not exist '/home/deploy/jianyi/releases'" 1>&2; false; fi as deploy@182.61.5.211
+ DEBUG [913e53f0] Command: if test ! -d /home/deploy/jianyi/releases; then echo "Directory does not exist '/home/deploy/jianyi/releases'" 1>&2; false; fi
+ DEBUG [913e53f0] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [ce41b848] Running /usr/bin/env echo "Branch master (at 87b3525b863495d35838b8b474cdf02b91f9a08e) deployed as release 20191112021405 by bigbook" >> /home/deploy/jianyi/revisions.log as deploy@182.61.5.211
+ DEBUG [ce41b848] Command: cd /home/deploy/jianyi/releases && /usr/bin/env echo "Branch master (at 87b3525b863495d35838b8b474cdf02b91f9a08e) deployed as release 20191112021405 by bigbook" >> /home/deploy/jianyi/revisions.log
+  INFO [ce41b848] Finished in 0.173 seconds with exit status 0 (successful).

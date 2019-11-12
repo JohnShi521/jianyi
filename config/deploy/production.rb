@@ -63,3 +63,9 @@ server "182.61.5.211", user: "deploy", roles: %w{app db web}, my_property: :my_v
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+namespace :deploy do
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  end
+end
