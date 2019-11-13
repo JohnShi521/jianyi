@@ -1,15 +1,21 @@
 <h2> Product List </h2>
+<% if current_user %>
+<% if current_user.admin? %>
 <div class="pull-right" style="padding-bottom: 20px;">
+
   <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+
 </div>
+<% end %>
+<% end %>
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>#</th>
-      <th width="220">Product Pic</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th width="100"> Options</th>
+      <th>号码</th>
+      <th width="220">照片</th>
+      <th>名字</th>
+      <th>价格</th>
+  <% if current_user %>    <% if current_user.admin? %><th width="100"> Options</th><% end %><% end %>
     </tr>
   </thead>
   <tbody>
@@ -33,9 +39,7 @@
         <td>
           <%= product.price %>
         </td>
-        <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
-        </td>
+    <% if current_user %>    <% if current_user.admin? %>   <td>  <%= link_to("Edit", edit_admin_product_path(product)) %></td><% end %><% end %>
       </tr>
     <% end %>
   </tbody>

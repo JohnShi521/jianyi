@@ -5,9 +5,10 @@ Rails.application.routes.draw do
        delete :clean
      end
    end
+     root 'welcome#index'
 root 'products#index'
   devise_for :users
-  root 'welcome#index'
+  
   namespace :admin do
      resources :products
   end
